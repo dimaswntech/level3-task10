@@ -1,11 +1,16 @@
 <template>
-  <div class=" flex flex-col items-center justify-center">
-    <p>Data Gudang</p>
-    <p>Toko Kelontong Pijar</p>
-    <button @click="toggleModal">Tambah Data</button>
-    <home-table-product></home-table-product>
+  <div class="min-h-screen bg-gray-100">
+    <div class=" flex flex-col items-center justify-center">
+      <p class="mt-7 text-4xl mb-1.5">Data Gudang</p>
+      <p class="mb-5 text-4xl">Toko Kelontong Pijar</p>
+      <button @click="toggleModal"
+              class="text-red-500 bg-transparent border border-solid border-red-500 hover:bg-red-500 hover:text-white active:bg-red-600 font-bold uppercase text-sm px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-7 ease-linear transition-all duration-150">
+        Tambah Data
+      </button>
+      <home-table-product></home-table-product>
 
-    <modal-tambahProduct :show="showModal" @customModal="valueShow" @successAdd="refreshPage"></modal-tambahProduct>
+      <modal-tambahProduct :show="showModal" @customModal="valueShow" @successAdd="refreshPage"></modal-tambahProduct>
+    </div>
   </div>
 </template>
 
@@ -17,7 +22,7 @@ export default {
     }
   },
   methods: {
-    toggleModal: function(){
+    toggleModal: function () {
       this.showModal = !this.showModal;
     },
     valueShow: function (val) {
