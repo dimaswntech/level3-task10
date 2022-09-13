@@ -18,7 +18,7 @@
         <td>{{ post.keterangan }}</td>
         <td>{{ post.harga }}</td>
         <td>{{ post.jumlah }}</td>
-        <td><nuxt-link :to="{name: 'edit-id', params:{id:post.id}}">input</nuxt-link> || <p @click="deletePost(post.id)">Delete</p></td>
+        <td><nuxt-link :to="{name: 'update-id', params:{id:post.id}}">input</nuxt-link> || <p @click="deletePost(post.id)">Delete</p></td>
       </tr>
       </tbody>
     </table>
@@ -52,8 +52,6 @@ export default {
   methods: {
 
     async deletePost(row) {
-
-      //delete data post by ID
       await this.$axios.delete(`/api/products/${row}`)
         .then(() => {
 
