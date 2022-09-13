@@ -13,8 +13,6 @@ import Component from "nuxt-class-component";
         harga: null,
         jumlah: null
       },
-      //state validation
-      validation: []
     }
   }
 })
@@ -37,11 +35,6 @@ export default class tambahProduct extends Vue {
 
     })
       .then(() => {
-
-        //redirect ke route "post"
-        // this.$router.push({
-        //   name: 'home'
-        // })
         this.$emit("customModal")
         this.$emit("successAdd")
 

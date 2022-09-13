@@ -21,13 +21,6 @@
           </div>
           <!--body-->
           <div class="relative p-6 flex-auto">
-            <!--            <p class="my-4 text-slate-500 text-lg leading-relaxed">-->
-            <!--              I always felt like I could do anything. That’s the main-->
-            <!--              thing people are controlled by! Thoughts- their perception-->
-            <!--              of themselves! They're slowed down by their perception of-->
-            <!--              themselves. If you're taught you can’t do anything, you-->
-            <!--              won’t do anything. I was taught I could do everything.-->
-            <!--            </p>-->
             <div class="mb-5 pt-0">
               <p class="mb-1">1. Nama Produk</p>
               <input v-model="products.nama_produk" type="text" placeholder="Nama ..."
@@ -54,12 +47,12 @@
             <button
               class="text-red-500 bg-transparent border border-solid border-red-500 hover:bg-red-500 hover:text-white active:bg-red-600 font-bold uppercase text-sm px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button" v-on:click="toggleModal()">
-              Close
+              CLOSE
             </button>
             <button
               class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button" v-on:click="store()">
-              Save Changes
+              SAVE
             </button>
           </div>
         </div>
@@ -72,18 +65,3 @@
 <script lang="ts">
 export {default} from './tambahProduct.controller'
 </script>
-
-<!--<script>-->
-<!--export default {-->
-<!--  data() {-->
-<!--    return {-->
-<!--      showModal: false-->
-<!--    }-->
-<!--  },-->
-<!--  methods: {-->
-<!--    toggleModal: function(){-->
-<!--      this.showModal = !this.showModal;-->
-<!--    }-->
-<!--  }-->
-<!--}-->
-<!--</script>-->
